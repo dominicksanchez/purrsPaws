@@ -1,0 +1,24 @@
+page-place-detail {
+    .profileTbl tr:nth-child(1):after {
+        display: none;
+    }
+
+    .profileTbl tr:nth-child(1):after {
+        display: none;
+    }
+
+    .timeIcon {
+        vertical-align: top;
+        padding-top: 15px;
+    }
+
+    .sched ul {
+        padding-left: 0;
+        margin-top: 0;
+    }
+
+    .sched ul li {
+        list-style: none;
+        margin-bottom: 10px;
+    }
+}

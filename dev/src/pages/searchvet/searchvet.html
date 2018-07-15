@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>Nearest Vet Clinics</ion-title>
+    </ion-navbar>
+</ion-header>
+  
+  
+<ion-content>
+  <ion-spinner name="crescent" class="pageLoader" *ngIf="pageLoaded == false"></ion-spinner>
+  <button ion-button color="primary" (click)="doCheckbox()" class="SearchHours"><ion-icon name="search"></ion-icon> &nbsp; &nbsp;Search by Opening Hours</button>
+  <div #map id="map"></div>
+  <div *ngIf="pageLoaded" style="width : 100% ;height: 60%">
+    <p class="noResult" *ngIf="places?.length == 0">No search result!</p>
+    <ion-list *ngIf="places?.length">
+      <ion-item *ngFor="let place of places" (click)="placeDetail(place)">
+        <p>{{place.name}}</p>
+        <ion-icon name="arrow-dropright" class="arrow"></ion-icon>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
+  
